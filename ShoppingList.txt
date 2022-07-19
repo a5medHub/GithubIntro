@@ -5,3 +5,4 @@ Ornages
 Bananas
 Cherries
 Carrots
+Cereal

@@ -14,12 +14,12 @@ app.use(expressLayouts);
 app.use(express.static("public"));
 app.use("/", indexRouter);
 
-const mongoose = require("mangoose");
-mongoose.connect(process.env.DATABASE_URL, {
-  useNewUrlParser: true,
-});
+const mongoose = require("mongoose");
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on("error", (error) => console.error(error));
-db.once("open", (error) => console.error("connected to mongoose"));
+db.once("open", () => console.log("Connected to Mongoose"));
+
+app.use("/", indexRouter);
 
 app.listen(process.env.PORT || 3000);

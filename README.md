@@ -1,2 +1,2 @@
 # GithubIntro
-A basic intro to Git and Github
+A testing env to basic intro to Git and Github and some web applications
